@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TETRIS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="backdrop" style="display: block;">
+        <div class="preview-screen">
+            <img src="./img/TETRIS.png" alt="Tetris Picture">
+            <button type="button" class="btn-start" data-modal-close>Play</button>
+        </div>
+    </div>
+    <div class="tetris-container" style="display: none;">
+        <div class="tetris-screen">
+            <canvas id="tetris" alt="Tetris Picture" width="200" height="400"></canvas>
+        </div>
+        <div class="player-panel">
+            <header class="game-mane">
+                <img src="./img/TETRIS.png" alt="Tetris Picture"
+                    style="position: relative; top:20px; height:10vh; width: 30vw;">
+            </header>
+            <div class="tetris-game-status">
+                <div class="screens">
+                    <div class="piece">
+                        <p>NEXT PIECE</p>
+                        <canvas id="next-piece" width="150" height="250"></canvas>
+                        <div class="status-screens">
+                            <p>score:
+                            <div id="score"></div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="piece">
+                        <p>HOLD PIECE</p>
+                        <canvas id="hold-piece" width="150" height="250"></canvas>
+                        <div class="status-screens">
+                            <p>lvl:
+                            <div id="lvl"></div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="control-panel">
+                <div class="btns-game-process">
+                    <div class="btn-first">
+                        <span>START/PAUSE</span>
+                        <button id="start-pause" class="btn btn-red"></button>
+                    </div>
+                    <div class="btn-first middle">
+                        <span>SOUND</span>
+                        <button id="togglesound" class="btn btn-red"></button>
+                    </div>
+                    <div class="btn-first">
+                        <span>RESET</span>
+                        <button id="game-reset" class="btn btn-red"></button>
+                    </div>
+                </div>
+                <div class="btns-move-control">
+                    <div class="bnts-move">
+                        <div class="btns-move-upper">
+                            <div class="btn-second">
+                                <button id="btn-left" class="btn btn-yellow"></button>
+                                <p>LEFT</p>
+                                <p class="overline">LEVEL</p>
+                            </div>
+                            <div class="btn-second">
+                                <button id="btn-right" class="btn btn-yellow"></button>
+                                <p>RIGHT</p>
+                            </div>
+                        </div>
+                        <div class="btns-move-lower">
+                            <div class="btn-third">
+                                <button id="btn-hold" class="btn btn-yellow"></button>
+                                <p>HOLD</p>
+                            </div>
+                            <div class="btn-third central">
+                                <button id="btn-down" class="btn btn-yellow"></button>
+                                <p>DOWN</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-rotate">
+                        <div class="btn-fourth">
+                            <button id="btn-hDrop" class="btn btn-yellow big"></button>
+                            <p>HARD DROP</p>
+                        </div>
+                        <div class="btn-fourth">
+                            <button id="btn-rotate" class="btn btn-yellow big"></button>
+                            <p>ROTATE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cuts" style="display: none;">
+        <h1>KEYBOARD SHORTCUTS</h1>
+        <div class="keyboard-shortcuts">
+            <div class="key-desc">
+                <img src="./img/control/icons8-down-arrow-key-64.png" alt="">
+                <p>MOVE DOWN</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-left-arrow-key-64.png" alt="">
+                <p>MOVE LEFT</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-right-arrow-key-64.png" alt="">
+                <p>MOVE RIGHT</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-up-arrow-key-64.png" alt="">
+                <p>ROTATE CLOCKWISE</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-ctrl-64.png" alt="">
+                <p>ROTATE COUNTERCLOCKWISE</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-space-64.png" alt="">
+                <p>HARD DROP(Space)</p>
+            </div>
+            <div class="key-desc">
+                <img src="./img/control/icons8-esc-64.png" alt="">
+                <p>PAUSE(P)</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="./img/pngwing.com.png" alt="" srcset="">
+        <p>
+            <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=alexzhdeveloper@gmail.com&su=SUBJECT&body=BODY&bcc=alekswinner7905@gmail.com">
+                alexzhdeveloper@gmail.com </a>
+        </p>
+    </footer>
+    <script src="tetris_logic.js"></script>
+    <script src="tetris.js"></script>
+    <script src="render.js"></script>
+</body>
+
+</html>
