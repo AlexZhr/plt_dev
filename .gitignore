@@ -1,3 +1,16 @@
+ex*
+.vscode
+QWASAR TASKS
+test
+*.yml
+*.json
+yarn*
+curl-8.0.1
+RUBY
+*.csv
+*.lock
+canvas*
+
 # Logs
 logs
 *.log
@@ -128,3 +141,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+
+

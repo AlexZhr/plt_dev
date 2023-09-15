@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users index page</title>
+    </head>
+    <body>
+        <h1>Users</h1>        
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Age</th>                
+            </tr>
+            <% if @users.any? %>
+                <% @users.each do |user| %>
+                    <tr>
+                        <td><%= user["firstname"] %></td>
+                        <td><%= user["lastname"] %></td>
+                        <td><%= user["email"] %></td>
+                        <td><%= user["age"] %></td>
+                    </tr>
+                <% end %>
+            <% else %>
+                <p>No users to display.</p>
+            <% end %>
+        </table>
+
+        <h1>Create new user<h1>
+        <form action="/users" method="POST">
+            <label>Firstname:</label>
+            <input type = "text" name = "firstname" placeholder = "Firstname">
+            <br>
+            <label>Lastname:</label>
+            <input type = "text" name = "fastname" placeholder = "Lastname">
+            <br>
+            <label>Age:</label>
+            <input type = "number" name = "age">
+            <br>
+            <label>Email:</label>
+            <input type = "text" name = "email" placeholder = "email">
+            <br>
+            <label>Password:</label>
+            <input type = "text" name = "password">
+            <br>
+            <input type = "submit" name = "Create">
+        </form>
+    <body>
+</html>

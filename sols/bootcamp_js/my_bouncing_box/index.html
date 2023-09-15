@@ -1,0 +1,41 @@
+$>cat index.html
+<html style='background-color: black'>
+  <div id="my_bouncing_box" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >zhurov_o</div>
+  <script type="text/javascript">
+    var box=document.getElementById("my_bouncing_box")
+    var pos_left=box.offsetLeft;
+    var pos_tp=box.offsetTop;
+    var t=setInterval(move, 0.5);
+    var moveLeft=true;
+    var moveBack=true;
+
+        function move() {
+            box.style.left=pos_left + "px";
+            box.style.top=pos_tp + "px";
+                      
+            if(pos_tp>(window.innerHeight-100)) {
+                moveLeft=false;
+            };
+            if(moveLeft){
+                pos_tp++;
+            } else {
+                pos_tp--;
+            }
+            if(pos_tp<=0){
+                moveLeft=true;
+            }
+            if(pos_left>(window.innerWidth-100)) {
+                moveBack=false;
+            };
+            if(moveBack){
+                pos_left++;
+            } else {
+                pos_left--;
+            }
+            if(pos_left<=0){
+                moveBack=true;
+            }
+        };
+  </script>
+</html>
+$>

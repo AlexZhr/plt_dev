@@ -1,0 +1,30 @@
+* {
+    min-height: 5rem;
+    text-align: center;
+}
+
+.header {
+    background-color: orange;
+    border: 6px darkorange;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main {
+    line-height: 200%;
+    background-color: skyblue;
+    border: 6px blue;
+    border-radius: 20px;
+}
+
+.sidebar {
+    background-color: LightCoral;
+    border: 6px red;
+    border-radius: 20px;
+}
+
+.footer {
+    background-color: Lightgreen;
+    border: 6px red;
+    border-radius: 20px;
+}

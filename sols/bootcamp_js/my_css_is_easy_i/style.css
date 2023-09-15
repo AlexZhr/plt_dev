@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    font: 1.2rem;
+    text-align: center;
+    line-height: 5em;     
+
+}
+
+.My-CSS{
+    display: flex;
+    flex-direction: column;
+}
+
+.My-CSS.div{
+    text-align: center;
+}
+@media(max-width: 640px){
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+}
+.box-1{
+    background-color: #00B7EB;
+}
+.box-2{
+    background-color: #FF0000;
+}
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+.box-3{
+    background-color: #00FF00;
+    flex: 50%;
+}
+.box-4{
+    background-color: #800080;
+    flex: 50%;
+}
+.box-5{
+    background-color: #444444;
+}
