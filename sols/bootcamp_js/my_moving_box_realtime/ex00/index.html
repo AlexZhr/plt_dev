@@ -1,0 +1,25 @@
+$>cat index.html
+<html>
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+      
+      var box = document.getElementById("my_box_realtime");
+      var pos_right = 70;
+      var pos_bottom = 70;
+      var t = setInterval(move, 500);
+
+      function move() {
+          if (pos_right <= 0 || pos_bottom <= 0 ) {
+              clearInterval(t);
+          }
+          else {
+              box.style.right = pos_right + "px";
+              box.style.bottom = pos_bottom + "px";
+              pos_right -- ;
+              pos_bottom -- ;
+                        
+          }
+      }
+    </script>
+</html>
+$>
